@@ -1,0 +1,6 @@
+include ':android-godeye-sample'
+include ':android-godeye'
+include ':android-godeye-monitor'
+include ':android-godeye-toolboxes:android-godeye-leakcanary'
+include ':android-godeye-toolboxes:android-godeye-xcrash'
+include ':android-godeye-toolboxes:android-godeye-okhttp'

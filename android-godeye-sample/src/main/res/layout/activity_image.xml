@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.hikyson.godeye.sample.ImageActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/activity_image_change_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Layout" />
+
+            <Button
+                android:id="@+id/activity_image_change_visibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Visibility" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/activity_image_iv2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="10dip"
+            android:layout_marginRight="5dip"
+            android:src="@drawable/androidgodeye_ic_remove_red_eye"
+            android:tint="#55ff0000" />
+
+        <ImageView
+            android:id="@+id/activity_image_iv3"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:scaleType="center"
+            android:src="@drawable/image_test1"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="50dp"
+            android:scaleType="center"
+            android:src="@drawable/image_test2" />
+
+        <ImageView
+            android:id="@+id/activity_image_iv1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="10dip"
+            android:layout_marginRight="5dip"
+            android:src="@drawable/ic_launcher_background"
+            android:tint="#55ff0000" />
+    </LinearLayout>
+</ScrollView>

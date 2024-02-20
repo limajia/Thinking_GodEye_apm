@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.hikyson.android.godeye.sample.MainActivity">
+
+    <cn.hikyson.godeye.sample.LogView
+        android:id="@+id/activity_main_logview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#505050">
+    </cn.hikyson.godeye.sample.LogView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:text="Core"
+                android:textSize="25dp"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#cccccc">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <CheckBox
+                        android:id="@+id/activity_main_methodcanary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="methodcanary"/>
+
+                    <CheckBox
+                        android:id="@+id/activity_main_cpu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="cpu"/>
+
+                    <CheckBox
+                        android:id="@+id/activity_main_battery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="battery"/>
+
+                    <CheckBox
+                        android:id="@+id/activity_main_fps"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="fps"/>
+
+                    <CheckBox
+                        android:id="@+id/activity_main_leak"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="leak"/>
+
+                    <CheckBox
+                        android:id="@+id/activity_main_heap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="heap"/>
+
+                    <CheckBox
+                        android:id="@+id/activity_main_pss"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="pss"/>
+
+                    <CheckBox
+                        android:id="@+id/activity_main_ram"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ram"/>
+
+                    <CheckBox
+                        android:id="@+id/activity_main_sm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="sm"/>
+
+                    <CheckBox
+                        android:id="@+id/activity_main_traffic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="traffic"/>
+
+                    <CheckBox
+                        android:id="@+id/activity_main_crash"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="crash"/>
+
+                    <CheckBox
+                        android:id="@+id/activity_main_thread"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="thread"/>
+
+                    <CheckBox
+                        android:id="@+id/activity_main_deadlock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="deadlock"/>
+
+                    <CheckBox
+                        android:id="@+id/activity_main_pageload"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="pageload"/>
+
+                    <CheckBox
+                        android:id="@+id/activity_main_appsize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="appsize"/>
+
+                    <CheckBox
+                        android:id="@+id/activity_main_view_canary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="viewcanary"/>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/activity_main_all"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SelectAll"
+                    android:textSize="13dp"/>
+
+                <Button
+                    android:id="@+id/activity_main_cancel_all"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UnSelectAll"
+                    android:textSize="13dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/activity_main_install"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="InstallSelected"
+                    android:textSize="13dp"/>
+
+                <Button
+                    android:id="@+id/activity_main_install_with_assets"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="InstallForAssets"
+                    android:textSize="13dp"/>
+
+                <Button
+                    android:id="@+id/activity_main_uninstall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="UninstallAll"
+                    android:textSize="13dp"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:text="Monitor"
+                android:textSize="25dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/activity_main_monitor_work"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Work"
+                    android:textSize="13dp"/>
+
+                <Button
+                    android:id="@+id/activity_main_monitor_shutdown"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Shutdown"
+                    android:textSize="13dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:text="Consumers"
+                android:textSize="25dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/activity_main_consumer_methodcanary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="methodcanary"/>
+
+                <Button
+                    android:id="@+id/activity_main_consumer_cpu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="cpu"/>
+
+                <Button
+                    android:id="@+id/activity_main_consumer_battery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="battery"/>
+
+                <Button
+                    android:id="@+id/activity_main_consumer_fps"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="fps"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/activity_main_consumer_leak"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="leak"/>
+
+                <Button
+                    android:id="@+id/activity_main_consumer_heap"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="heap"/>
+
+                <Button
+                    android:id="@+id/activity_main_consumer_pss"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="pss"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/activity_main_consumer_ram"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ram"/>
+
+                <Button
+                    android:id="@+id/activity_main_consumer_network"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="network"/>
+
+                <Button
+                    android:id="@+id/activity_main_consumer_sm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="sm"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/activity_main_consumer_startup"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="startup"/>
+
+                <Button
+                    android:id="@+id/activity_main_consumer_traffic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="traffic"/>
+
+                <Button
+                    android:id="@+id/activity_main_consumer_crash"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="crash"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/activity_main_consumer_thread"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="thread" />
+
+                <Button
+                    android:id="@+id/activity_main_consumer_deadlock"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="deadlock"/>
+
+                <Button
+                    android:id="@+id/activity_main_consumer_pageload"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="pageload"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/activity_main_consumer_appsize"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="appsize" />
+
+                <Button
+                    android:id="@+id/activity_main_consumer_view_canary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="view canary" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/activity_main_consumer_cancel_watch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancel All Consumer"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:text="Tools"
+                android:textSize="25dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/activity_main_block_et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="block time(millis)"/>
+
+                <Button
+                    android:id="@+id/activity_main_make_block"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Block!"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/activity_main_make_invocations"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Invocations"/>
+
+                <Button
+                    android:id="@+id/activity_main_make_request"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Network Request"/>
+
+                <Button
+                    android:id="@+id/activity_main_make_leak"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="To Leak Activity"/>
+
+                <Button
+                    android:id="@+id/activity_main_make_leak_v4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="To Leak V4 Activity"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/activity_main_make_crash"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Crash!!!"/>
+
+                <Button
+                    android:id="@+id/activity_main_make_deadlock"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="DeadLock"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/activity_main_make_pageload"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="jumpPage"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/activity_main_make_follow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Log Follow"/>
+
+                <Button
+                    android:id="@+id/activity_main_make_clear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Log Clear"/>
+
+                <Button
+                    android:id="@+id/activity_main_test"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="test"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,22 @@
+task copyReleaseForGithubRelease(type: Copy) {
+    from './android-godeye-sample/build/outputs/apk/release/android-godeye-sample-release.apk'
+    into "github_release"
+}
+
+task copyDebugForGithubRelease(type: Copy) {
+    from './android-godeye-sample/build/outputs/apk/debug/android-godeye-sample-debug.apk'
+    into "github_release"
+}
+
+task copyChangelogForGithubRelease(type: Copy) {
+    from(rootProject.rootDir.absolutePath) {
+        include 'CHANGELOG.md'
+    }
+    into "github_release"
+}
+
+task cleanupGithubRelease() {
+    doLast {
+        file('github_release').deleteDir()
+    }
+}
